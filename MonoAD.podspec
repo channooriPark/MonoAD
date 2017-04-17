@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #
 
   s.framework  = "UIKit"
-  s.dependency = 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "master"
+  s.dependency = 'CryptoSwift', :git => 'https://github.com/krzyzanowskim/CryptoSwift', :branch => 'master'
   s.dependency = 'SwiftyJSON', '>= 3.0.0'
   s.dependency = 'Alamofire', '~> 4.0'
   # s.framework  = "SomeFramework"
