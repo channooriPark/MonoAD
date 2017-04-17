@@ -16,16 +16,16 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MonoAD"
-  s.version      = "0.0.1"
-  s.summary      = "Monorama ADS Platform"
+  s.version      = "0.0.2"
+  s.summary      = "Monorama ADS"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "Monorama ADS Platform"
+
 
   s.homepage     = "http://www.mono-rama.com"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -63,11 +63,11 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  #s.platform     = :ios
+  #s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+   s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "MonoAD/**/*.{swift}"
-  s.exclude_files = "MonoAD/Exclude"
+  #s.exclude_files = "MonoAD/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -108,6 +108,9 @@ Pod::Spec.new do |s|
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  s.pod_target_xcconfig =  {
+    'SWIFT_VERSION' => '3.0',
+  }
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,9 +120,6 @@ Pod::Spec.new do |s|
   #
 
   s.framework  = "UIKit"
-  s.dependency = 'CryptoSwift', :git => 'https://github.com/krzyzanowskim/CryptoSwift', :branch => 'master'
-  s.dependency = 'SwiftyJSON', '>= 3.0.0'
-  s.dependency = 'Alamofire', '~> 4.0'
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
@@ -137,5 +137,9 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+  s.dependency 'CryptoSwift'
+  s.dependency 'SwiftyJSON'
+  s.dependency 'Alamofire', '~> 4.0'
+
 
 end
